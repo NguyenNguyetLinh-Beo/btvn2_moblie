@@ -3,55 +3,48 @@ Sinh Viên
 Họ tên: Nguyễn Nguyệt Linh
 MSV: K225480106039
 Lớp: 58KTPM
-Môn: TEE0421 - Phát triển ứng dụng với mã nguồn mở
+Môn: TEE0421 - Phát triển ứng dụng với mã nguồn mở  
+Tính năng chính của hệ thống quản lý tiệm cầm đồ   
+Quản lý khách hàng (thêm, sửa, xoá thông tin khách hàng).  
+Quản lý tài sản cầm cố của khách hàng.  
+Quản lý phiếu cầm đồ:  
+số tiền vay  
+lãi suất  
+ngày cầm  
+ngày đến hạn  
+trạng thái đã trả/chưa trả.  
+Sử dụng khóa ngoại (Foreign Key) để liên kết dữ liệu giữa các bảng.  
+Quản trị dữ liệu bằng Django Admin (CRUD dữ liệu trực tiếp trên web).  
+Lưu trữ dữ liệu bằng MariaDB.  
+Kiểm tra dữ liệu bằng phpMyAdmin.  
+Hiển thị danh sách con nợ quá hạn bằng template HTML + view Django.  
+Docker hóa hệ thống gồm:  
+Django  
+MariaDB  
+phpMyAdmin. 
+Public website bằng Cloudflare Tunnel.  
+Sử dụng SSH và nano để thao tác, chỉnh sửa file trên Ubuntu. 
+Kiến trúc hệ thống  
 
-📋 Pawn Shop Management System
-Hệ thống quản lý tiệm cầm đồ được xây dựng bằng Django, MariaDB, Docker, và Cloudflare Tunnel.
+Hệ thống được xây dựng theo mô hình Client – Server kết hợp Docker Container.  
 
-Môn học: Phát triển ứng dụng với mã nguồn mở - TEE0421
-Lớp: 58KTPM
-Deadline: 23h59 ngày 09 tháng 5 năm 2026
-Tính năng chính của hệ thống quản lý tiệm cầm đồ  
-Quản lý khách hàng (thêm, sửa, xoá thông tin khách hàng).
-Quản lý tài sản cầm cố của khách hàng.
-Quản lý phiếu cầm đồ:
-số tiền vay
-lãi suất
-ngày cầm
-ngày đến hạn
-trạng thái đã trả/chưa trả.
-Sử dụng khóa ngoại (Foreign Key) để liên kết dữ liệu giữa các bảng.
-Quản trị dữ liệu bằng Django Admin (CRUD dữ liệu trực tiếp trên web).
-Lưu trữ dữ liệu bằng MariaDB.
-Kiểm tra dữ liệu bằng phpMyAdmin.
-Hiển thị danh sách con nợ quá hạn bằng template HTML + view Django.
-Docker hóa hệ thống gồm:
-Django
-MariaDB
-phpMyAdmin.
-Public website bằng Cloudflare Tunnel.
-Sử dụng SSH và nano để thao tác, chỉnh sửa file trên Ubuntu.
-Kiến trúc hệ thống
-
-Hệ thống được xây dựng theo mô hình Client – Server kết hợp Docker Container.
-
-Các thành phần chính:
-Người dùng truy cập hệ thống bằng trình duyệt web.
-Django đóng vai trò Backend xử lý nghiệp vụ và giao diện quản trị.
-MariaDB dùng để lưu trữ cơ sở dữ liệu.
-phpMyAdmin dùng để kiểm tra và quản lý dữ liệu trực quan.
-Docker Compose dùng để quản lý và chạy các container.
-Cloudflare Tunnel dùng để public hệ thống ra internet.
-Luồng hoạt động:
-Người dùng
-    ↓
-Trình duyệt Web
-    ↓
-Django Server
-    ↓
-MariaDB Database  
-PHẦN 1 — CÀI UBUNTU + DOCKER
-Bước 1: Update Ubuntu
+Các thành phần chính:  
+Người dùng truy cập hệ thống bằng trình duyệt web.  
+Django đóng vai trò Backend xử lý nghiệp vụ và giao diện quản trị.  
+MariaDB dùng để lưu trữ cơ sở dữ liệu.  
+phpMyAdmin dùng để kiểm tra và quản lý dữ liệu trực quan.  
+Docker Compose dùng để quản lý và chạy các container.  
+Cloudflare Tunnel dùng để public hệ thống ra internet.  
+Luồng hoạt động:  
+Người dùng  
+    ↓ 
+Trình duyệt Web  
+    ↓ 
+Django Server   
+    ↓  
+MariaDB Database    
+PHẦN 1 — CÀI UBUNTU + DOCKER  
+Bước 1: Update Ubuntu  
 
 Mở terminal:
 
