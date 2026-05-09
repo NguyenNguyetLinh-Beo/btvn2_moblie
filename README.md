@@ -45,39 +45,17 @@ Django Server
 MariaDB Database    
 PHẦN 1 — CÀI UBUNTU + DOCKER  
 Bước 1: Update Ubuntu  
-
-Mở terminal:
-
-sudo apt update
-sudo apt upgrade -y
 Bước 2: Cài Docker
-sudo apt install docker.io -y
 Bước 3: Kiểm tra Docker
-docker --version
-
-Nếu hiện kiểu:
-
-Docker version 26.x.x
-
-là OK.
-
 Bước 4: Cài Docker Compose
-sudo apt install docker-compose-v2 -y
-
-Kiểm tra:
-
-docker compose version
+sudo apt install docker-compose-v2 -y  
+Kiểm tra: 
+docker compose version 
 PHẦN 2 — TẠO THƯ MỤC DỰ ÁN
 Bước 5: Tạo thư mục project
-mkdir pawnshop-system
-
-Vào thư mục:
-
-cd pawnshop-system
 PHẦN 3 — TẠO FILE docker-compose.yml
 Bước 6: Tạo file
 sudo nano docker-compose.yml
-
 Dán:
 
 version: '3.9'
@@ -141,66 +119,13 @@ services:
 volumes:
   mariadb_data:
 Bước 7: Lưu file nano
-
-Nhấn:
-
-CTRL + O
-ENTER
-CTRL + X
-PHẦN 4 — TẠO THƯ MỤC DJANGO
+<img width="1468" height="1015" alt="image" src="https://github.com/user-attachments/assets/b22138d6-d94f-413c-ae68-b028f8a3c13a" />
 Bước 8: Tạo thư mục django_app
-mkdir django_app
-
-Vào:
-
-cd django_app
 PHẦN 5 — TẠO Dockerfile
 Bước 9: Tạo file Dockerfile
-sudo nano Dockerfile
-
-Dán:
-
-# Dùng image python chính thức
-FROM python:3.11
-
-# Không tạo file pyc
-ENV PYTHONDONTWRITEBYTECODE=1
-
-# Hiển thị log realtime
-ENV PYTHONUNBUFFERED=1
-
-# Tạo thư mục làm việc
-WORKDIR /app
-
-# Copy requirements
-COPY requirements.txt /app/
-
-# Update pip
-RUN pip install --upgrade pip
-
-# Cài thư viện
-RUN pip install -r requirements.txt
-
-# Copy source code
-COPY . /app/
-
-# Mở port
-EXPOSE 8000
-
-Lưu lại.
-
 PHẦN 6 — TẠO requirements.txt
 Bước 10:
 sudo nano requirements.txt
-
-Dán:
-
-Django==5.2
-
-mysqlclient==2.2.4
-
-Lưu lại.
-
 PHẦN 7 — BUILD CONTAINER
 Bước 11: Quay lại thư mục gốc
 cd ..
@@ -215,28 +140,17 @@ django_app
 docker-compose.yml
 Bước 12: Build Docker
 docker compose up --build
-
 Đợi tải image.
-
 Nếu hiện:
-
 django_pawnshop
 mariadb_pawnshop
 phpmyadmin_pawnshop
-
 là OK.
-
 PHẦN 8 — TẠO PROJECT DJANGO
 Bước 13: Tạo project
-
 Mở terminal mới.
-
-Vào project:
-
-cd pawnshop-system
-
+Vào project: cd pawnshop-system
 Chạy:
-
 docker compose run django django-admin startproject pawnshop .
 Bước 14: Tạo app core
 docker compose run django python manage.py startapp core
@@ -244,17 +158,11 @@ PHẦN 9 — CẤU HÌNH DATABASE
 Bước 15: Mở settings.py
 sudo nano django_app/pawnshop/settings.py
 Bước 16: Thêm app core
-
 Tìm:
-
 INSTALLED_APPS = [
-
 Thêm:
-
 'core',
-
 Ví dụ:
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -394,35 +302,15 @@ Bước 23:
 docker compose up
 PHẦN 15 — TRUY CẬP WEB
 Django admin
-
 Mở trình duyệt:
-
-http://IP:8000/admin
-
-Ví dụ localhost:
-
-http://localhost:8000/admin
-
-Login tài khoản admin.
-
+http://localhost:8000/admin/
+<img width="1920" height="1020" alt="Screenshot 2026-05-09 122809" src="https://github.com/user-attachments/assets/eb225351-4d0f-4f4a-a5cd-f658010b7cd9" />
 PHẦN 16 — KIỂM TRA phpMyAdmin
 Bước 24:
-
 Mở:
-
-http://localhost:8080
-
-Login:
-
-user: root
-pass: root123
-
 Kiểm tra:
-
 pawnshop_db
-
 Sẽ thấy bảng:
-
 core_customer
 core_asset
 core_pawnticket
@@ -431,7 +319,6 @@ Bước 25: Tạo thư mục templates
 mkdir -p django_app/core/templates
 Bước 26: Tạo views.py
 sudo nano django_app/core/views.py
-
 Dán:
 
 from django.shortcuts import render
