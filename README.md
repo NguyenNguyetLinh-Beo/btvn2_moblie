@@ -109,8 +109,6 @@ Bước 30: Cài cloudflared
 wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb
 <img width="1904" height="834" alt="image" src="https://github.com/user-attachments/assets/ab9c5220-5b86-4414-b739-7cf254226299" />  
 <img width="1894" height="918" alt="image" src="https://github.com/user-attachments/assets/a96c9049-c4a3-4d9d-9657-91e80272fcc9" />  
-Link public:  
-<img width="1894" height="918" alt="Screenshot 2026-05-09 225449" src="https://github.com/user-attachments/assets/75655f5f-d90a-4ec9-8d69-9f329ba0a67a" />  
 Bước 31:
 sudo dpkg -i cloudflared.deb
 Bước 32: Public web  
