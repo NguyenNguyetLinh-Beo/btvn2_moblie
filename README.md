@@ -542,6 +542,10 @@ Mở link là được.
 PHẦN 19 — SSH + NANO
 SSH vào server
 ssh username@ip_server
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/0ca3633c-c5b5-4619-a5bd-d972f4267c50" />
+
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/ab2b1ae1-d475-45ac-9b5e-be2115261fe8" />
+<img width="1468" height="1015" alt="image" src="https://github.com/user-attachments/assets/b22138d6-d94f-413c-ae68-b028f8a3c13a" />
 
 Ví dụ:
 
