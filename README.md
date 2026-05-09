@@ -546,6 +546,8 @@ ssh username@ip_server
 
 <img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/ab2b1ae1-d475-45ac-9b5e-be2115261fe8" />
 <img width="1468" height="1015" alt="image" src="https://github.com/user-attachments/assets/b22138d6-d94f-413c-ae68-b028f8a3c13a" />
+<img width="1733" height="945" alt="image" src="https://github.com/user-attachments/assets/0fa938be-baec-4510-8d06-92c0cc5fd82b" />
+<img width="1878" height="915" alt="image" src="https://github.com/user-attachments/assets/24108542-b2c5-4e3b-960c-912fe6369f6a" />
 
 Ví dụ:
 
