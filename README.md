@@ -30,21 +30,28 @@ PHẦN 1 — CÀI UBUNTU + DOCKER
 - Bước 2: Cài Docker
 - Bước 3: Kiểm tra Docker
 - Bước 4: Cài Docker Compose
+  
 PHẦN 2 — TẠO THƯ MỤC DỰ ÁN
 - Bước 5: Tạo thư mục project
+
 PHẦN 3 — TẠO FILE docker-compose.yml
 - Bước 6: Tạo file
 sudo nano docker-compose.yml
 - Bước 7: Lưu file nano
 <img width="1468" height="1015" alt="image" src="https://github.com/user-attachments/assets/b22138d6-d94f-413c-ae68-b028f8a3c13a" />
+
 - Bước 8: Tạo thư mục django_app
+  
 PHẦN 5 — TẠO Dockerfile
 - Bước 9: Tạo file Dockerfile
+  
 PHẦN 6 — TẠO requirements.txt
 - Bước 10:
 sudo nano requirements.txt
+
 PHẦN 7 — BUILD CONTAINER
 - Bước 11: Quay lại thư mục gốc
+  
 PHẦN 8 — TẠO PROJECT DJANGO
 - Bước 13: Tạo project
 Mở terminal mới.
@@ -53,40 +60,49 @@ Chạy:
 docker compose run django django-admin startproject pawnshop .
 - Bước 14: Tạo app core
 docker compose run django python manage.py startapp core
+
 PHẦN 9 — CẤU HÌNH DATABASE
 - Bước 15: Mở settings.py
 sudo nano django_app/pawnshop/settings.py
 - Bước 16: Thêm app core
 - Bước 17: Sửa DATABASES
+  
 PHẦN 10 — TẠO MODEL
 - Bước 18: Mở models.py
 sudo nano django_app/core/models.py
+
 PHẦN 11 — ADMIN
 - Bước 19: Mở admin.py
 sudo nano django_app/core/admin.py
 <img width="1462" height="739" alt="image" src="https://github.com/user-attachments/assets/111f8ba0-92d4-431f-a5d6-9dd031fe4caf" />
+
 PHẦN 12 — MIGRATION
 - Bước 20: Tạo migration
 docker compose exec django python manage.py makemigrations
 - Bước 21: Migrate database
 docker compose exec django python manage.py migrate
+
 PHẦN 13 — TẠO ADMIN LOGIN
 - Bước 22:
 docker compose exec django python manage.py createsuperuser
 Username: admin
 Email:
 Password: ...
+
 PHẦN 14 — CHẠY WEB
 - Bước 23:
 <img width="1893" height="909" alt="image" src="https://github.com/user-attachments/assets/727a1350-fe50-42ba-9d25-17f1304b58a8" />
+
 PHẦN 15 — TRUY CẬP WEB
 Django admin
-- Bước 24:Mở trình duyệt:
+- Bước 24: Mở trình duyệt:
 http://localhost:8000/admin/
 <img width="1920" height="1020" alt="Screenshot 2026-05-09 122809" src="https://github.com/user-attachments/assets/eb225351-4d0f-4f4a-a5cd-f658010b7cd9" />
 <img width="1892" height="915" alt="image" src="https://github.com/user-attachments/assets/41489676-3244-4d96-baef-62c3f7ec3653" /
 <img width="1885" height="922" alt="Screenshot 2026-05-09 223721" src="https://github.com/user-attachments/assets/6a5bf7c0-ae43-4c44-bb7e-aaf1fa2cfc85" />
+
 PHẦN 16 — KIỂM TRA phpMyAdmin
+
 PHẦN 17 — TEMPLATE HTML
 - Bước 25: Tạo thư mục templates
 mkdir -p django_app/core/templates
@@ -96,6 +112,7 @@ mkdir -p django_app/core/templates
 - Bước 29: Tạo home.html
 sudo nano django_app/core/templates/home.html
 <img width="1885" height="922" alt="image" src="https://github.com/user-attachments/assets/35214535-dcea-4383-a7a2-5fe02d9dc790" />
+
 PHẦN 18 — CLOUDFLARE TUNNEL
 - Bước 30: Cài cloudflared
 wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb
